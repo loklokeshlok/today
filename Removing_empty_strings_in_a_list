@@ -1,0 +1,9 @@
+b = input().split("5")
+print([x.strip() for x in b if x.strip()])
+print(list(filter(lambda item: item.strip(), b)))
+print(list([x for x in b if x != '']))
+
+515151515155
+['1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1']
