@@ -1,0 +1,88 @@
+class Robot:
+    def highlights(self):
+        print("my name is {}".format(self.name))
+        
+r1 = Robot()
+r1.name = "XYZ"
+r1.color = "Red"
+r1.age = "10"
+
+r2 = Robot()
+r2.name = "123"
+r2.color = "Blue"
+r2.age = "20"
+
+r1.highlights()
+
+r2.highlights()
+
+class Robot1:
+    def __init__(self,name,color,age):
+        self.name = name
+        self.color = color
+        self.age = age
+    def highlights(self):
+        print("my name is {}".format(self.name))
+        
+r1 = Robot1("XYZ","Red",10)
+r2 = Robot1("123","Blue",20)
+
+r1.highlights()
+r2.highlights()
+
+class class1:
+    def __init__(self,name):
+        self.name = name
+    def introduce(self):
+        print("my name is {}".format(self.name))
+      
+r1 = class1("Lokesh")
+
+class class2:
+    def __init__(self,name):
+        self.name = name
+    
+r2 = class2("Loklokesh")
+
+r2.calling_reference = r1
+
+r2.calling_reference.introduce()
+########################################
+Single level and Multi-level Inheritance
+########################################
+class A:
+    def m1(self):
+        print("m1")
+    def m2(self):
+        print("m2")
+
+class B(A):
+    def m3(self):
+        print("m3")
+    def m4(self):
+        print("m4")
+
+class C(B):
+    def m5(self):
+        print("m5")
+    def m6(self):
+        print("m6")
+
+a1 = A()
+b1 = B()
+c1 = C()
+
+a1.a11 = b1
+
+class A:
+    def __init__(self):
+        print("in class A")
+    def xyz(self):
+        print("in class A method")
+class B(A):
+    def __init__(self):
+        super().xyz()
+        print("in class B")
+#in the case of multiple inheritance it follows Method Resolution Order(MRO)
+
+a1 = B()
